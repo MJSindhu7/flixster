@@ -35,7 +35,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
               // TODO: Reload your table view data
             self.movies = dataDictionary["results"] as! [[String:Any]]
             self.tableView.reloadData()
-            print(dataDictionary)
+            //print(dataDictionary)
            }
         }
         task.resume()
@@ -65,14 +65,22 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
       }
       
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        print("Loading up next screen")
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for:cell)!
+        let movie = movies[indexPath.row]
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
+
 
 }
