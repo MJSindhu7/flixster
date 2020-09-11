@@ -38,7 +38,7 @@ Demo workspace and current xcode workspace components are different.
 
 ### App Walkthrough GIF
 
-<img src="https://recordit.co/x6cgCo3cxX" width=250><br>
+<img src="https://recordit.co/x6cgCo3cxX.gif" width=250><br>
 
 ### Notes
 Issues with the grid, took sometime to figure out
